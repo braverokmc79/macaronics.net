@@ -1,0 +1,476 @@
+/*
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ CONTENTS /\/\/\/\/\/\/\/\/\/\/\/\/\/\//\/\/\/\
+
+	 1. IMPORT
+	 2. HEADER
+	 3. NAVIGATION
+	 4. FOOTER & FOOTER WIDGETS
+     5. SIDEBAR & SIDEBAR WIDGETS
+     6. PORTFOLIO/PROJECTS
+     7. BLOG STYLING
+     8. HOME PAGE
+     9. 404 PAGE
+     10. ABOUT PAGE
+     11. CONTACT PAGE FORM
+     12. ICON LIST
+     13. RECENT WORK CAROUSEL
+     14. TESTIMONIALS
+     15. ICON SERVICE BOXES
+     16. PARALLAX
+     17. CLIENTS
+     18. TYPOGRAPHY
+     19. BUTTONS
+     20. PRICING TABLES BOXS
+     21. TABS
+     22. ACCORDION & TOGGLE
+     23. PROGRESS SKILL BAR
+     24. PROMO BOX
+     25. PAGINATION
+     26. TITLE
+     27. DROPCAPS
+     28. HIGHLIGHT
+     29. SWIPE J.S SLIDER
+     30. CAROUSEL
+     31. FLICKR
+     33. LIST & BULLETS
+     33. BUTTON UP
+     34. MEDIA QUERIES
+*/
+
+/* =================================================================== */
+/* Import Section
+====================================================================== */
+
+.navbar-nav ul
+{
+    width:100%;
+    min-width:187px!important;
+    padding:0;
+}
+.navbar-nav > li > ul.dropdown-menu
+{
+    top:42px!important;
+}
+.nav-caption{
+    color: #323A45;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px 0 0 0;
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    width: 100%;
+    display: none;
+}
+.navbar-toggle{
+    background:#303436;
+    border:none;
+    padding:10px 10px;
+    border-radius:3px;
+    margin-top:5px;
+}
+.navbar-default{
+    background: #fff;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+    background:#303436;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color:#fff;
+    height:3px;
+}
+.navbar{
+    margin-bottom: 0;
+    min-height:35px;
+    border:none;
+}
+
+/* sub menus arrows */
+.navbar-nav .sub-arrow, .navbar-nav .collapsible .sub-arrow {
+    position:static;
+    margin-top:0;
+    margin-right:0;
+    margin-left:6px;
+    display:inline-block;
+    width:0;
+    height: 0;
+    overflow:hidden;
+    vertical-align:middle;
+    border-top:4px solid;
+    border-right:4px dashed transparent;
+    border-bottom:4px dashed transparent;
+    border-left:4px dashed transparent;
+}
+.navbar-nav > li > .has-submenu .sub-arrow {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    width:8px;
+    height: 8px;
+    line-height: 8px;
+    border-width: 0px;
+}
+.navbar-nav > li > .has-submenu .sub-arrow:before {
+    content: "\f107";
+}
+.navbar-nav ul .sub-arrow {
+    position:absolute;
+    right:0;
+    margin-top:6px;
+    margin-right:15px;
+    border-top:4px dashed transparent;
+    border-bottom:4px dashed transparent;
+    border-left:4px solid;
+}
+.navbar-nav ul a.has-submenu {
+    padding-right:30px;
+}
+.navbar-default .navbar-collapse2, .navbar-default .navbar-form{
+    border-color: transparent;
+}
+/* scrolling arrows for tall menus */
+.navbar-nav span.scroll-up, .navbar-nav span.scroll-down {
+    position:absolute;
+    display:none;
+    visibility:hidden;
+    height:20px;
+    overflow:hidden;
+    text-align:center;
+}
+.navbar-nav span.scroll-up-arrow, .navbar-nav span.scroll-down-arrow {
+    position:absolute;
+    top:-2px;
+    left:50%;
+    margin-left:-8px;
+    width:0;
+    height:0;
+    overflow:hidden;
+    border-top:7px dashed transparent;
+    border-right:7px dashed transparent;
+    border-bottom:7px solid;
+    border-left:7px dashed transparent;
+}
+.dropdown-menu.sm-nowrap{
+    display: none;
+    left: 0;
+    margin-left: 186px;
+    margin-top: -42px;
+    max-width: 20em;
+    min-width: 10em;
+    top: auto;
+    width: auto;
+}
+
+.navbar-nav span.scroll-down-arrow {
+    top:6px;
+    border-top:7px solid;
+    border-right:7px dashed transparent;
+    border-bottom:7px dashed transparent;
+    border-left:7px dashed transparent;
+}
+.navbar-default .navbar-nav li a{
+    color:#555;
+    text-transform:uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    line-height:15px;
+}
+.navbar-default .navbar-nav > li{
+}
+.navbar-default .navbar-nav > li:first-child{
+    border-left:none;
+}
+.navbar-default .navbar-nav > li > a{
+    padding:12px 18px;
+}
+
+.navbar-nav > li > a:hover,.navbar-nav > li > a:focus,.navbar-nav > li.active > a,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus
+{
+    background:none !important;
+    color:#0176E8!important;
+}
+.navbar-nav > li.active {
+    border-bottom: 3px solid #0176E8;
+}
+.navbar-nav > li:hover{
+    border-bottom: 3px solid #0176E8;
+    transition:all 0.2s ease-in-out 0s;
+}
+/* add more indentation for 2+ level sub in collapsible mode - Bootstrap normally supports just 1 level sub menus */
+.navbar-nav .collapsible ul .dropdown-menu > li > a,
+.navbar-nav .collapsible ul .dropdown-menu .dropdown-header {
+    padding-left:35px;
+}
+.navbar-nav .collapsible ul ul .dropdown-menu > li > a,
+.navbar-nav .collapsible ul ul .dropdown-menu .dropdown-header {
+    padding-left:45px;
+}
+.navbar-nav .collapsible ul ul ul .dropdown-menu > li > a,
+.navbar-nav .collapsible ul ul ul .dropdown-menu .dropdown-header {
+    padding-left:55px;
+}
+.navbar-nav .collapsible ul ul ul ul .dropdown-menu > li > a,
+.navbar-nav .collapsible ul ul ul ul .dropdown-menu .dropdown-header {
+    padding-left:60px;
+}
+.navbar-nav .dropdown-menu > li > a {
+    white-space:normal;
+    font-size: 13px;
+    padding:12px 20px;
+    border-bottom:1px solid #e4e4e4;
+}
+.navbar-nav .dropdown-menu > li > a:hover
+{
+    color: #0076E8;
+}
+.navbar-nav ul.sm-nowrap > li > a {
+    white-space:nowrap;
+}
+/* The following will make the sub menus collapsible for small screen devices (it's not recommended editing these) */
+.navbar-nav .collapsible ul {display:none;position:static !important;top:auto !important;left:auto !important;margin-left:0 !important;margin-top:0 !important;width:auto !important;min-width:0 !important;max-width:none !important;}
+.navbar-nav .collapsible ul.sm-nowrap > li > a {white-space:normal;}
+.navbar-nav .collapsible iframe{display:none;}
+/* disable Bootstrap 3's global box-sizing:border-box; for the menus as it doesn't play nice with SmartMenus */
+ul.sm li *,ul.sm li *:before,ul.sm li *:after{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus
+{
+    border-color:transparent!important;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus{
+    background-color:#fff ;
+}
+/*------------Animation-CSS-------------*/
+.navbar-nav > li:hover > ul{
+    -moz-animation: fadeInUp .4s ease-in;
+    -webkit-animation: fadeInUp .4s ease-in ;
+    animation: fadeInUp .4s ease-in;
+}
+
+.navbar-nav > li > ul.dropdown-menu li:hover ul{
+    /*display:block;*/
+    -moz-animation: fadeInUp .5s ease-in ;
+    -webkit-animation: fadeInUp .5s ease-in ;
+    animation: fadeInUp .5s ease-in;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .navbar-default .navbar-nav li a{
+        color:#fff;
+    }
+    .navbar{
+        background:#fff;
+        border-color: transparent;
+    }
+    .navbar.scroll-to-fixed-fixed{
+        box-shadow: 0 0 10px #9c9999;
+    }
+    .navbar-nav{
+        background:#303436;
+        margin: 0;
+    }
+    .navbar-collapse2{
+        position: absolute;
+        width: 100%;
+    }
+    .navbar-nav > li ul > li:first-child > a{border-top:none;}
+    .navbar-default .navbar-nav > li > a,.navbar-nav .dropdown-menu > li > a
+    {
+        padding-top:12px!important;
+        padding-bottom:12px!important;
+        border-top:1px solid #464c4f!important;
+        border-bottom:none!important;
+    }
+    .navbar-default .navbar-nav li a{
+        color: #fff;
+    }
+    .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a
+    {
+        padding-left:45px;
+        color:#fff;
+        font-size:13px;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus
+    {
+        background:#0076E8;
+        color:#fff;
+    }
+    .navbar-nav .sub-arrow, .navbar-nav .collapsible .sub-arrow
+    {
+        float:right;
+        color:#fff;
+    }
+    .navbar-nav > li > ul:before
+    {
+        content:"";
+        display:none;
+    }
+    .navbar-nav > li > .has-submenu .sub-arrow{
+        font-size: 14px;
+        font-weight: bold;
+        width: 10px;
+    }
+
+    .navbar-nav > li.active {
+        border-bottom: 1px solid #0076E8;
+    }
+    .navbar-nav > li:hover{
+        border-bottom: 1px solid #0076E8;
+        transition:none;
+    }
+
+    .navbar-nav > li:hover > ul{
+        -moz-animation: none;
+        -webkit-animation: none ;
+        animation: none;
+    }
+
+    .navbar-nav > li > ul.dropdown-menu li:hover ul{
+        -moz-animation: none;
+        -webkit-animation:none;
+        animation: none;
+    }
+    .nav-caption{ display: block; }
+
+   
+
+}
+
+
+
+
+
+
+
+
+
+
+.navbar-collapse2 {
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+.navbar-collapse2.in {
+  overflow-y: auto;
+}
+@media (min-width: 768px) {
+  .navbar-collapse2 {
+    width: auto;
+    border-top: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .navbar-collapse2.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+    visibility: visible !important;
+  }
+  .navbar-collapse2.in {
+    overflow-y: visible;
+  }
+  .navbar-fixed-top .navbar-collapse2,
+  .navbar-static-top .navbar-collapse2,
+  .navbar-fixed-bottom .navbar-collapse2 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.navbar-fixed-top .navbar-collapse2,
+.navbar-fixed-bottom .navbar-collapse2 {
+  max-height: 340px;
+}
+@media (max-device-width: 480px) and (orientation: landscape) {
+  .navbar-fixed-top .navbar-collapse2,
+  .navbar-fixed-bottom .navbar-collapse2 {
+    max-height: 200px;
+  }
+}
+.container > .navbar-header,
+.container-fluid > .navbar-header,
+.container > .navbar-collapse2,
+.container-fluid > .navbar-collapse2 {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+
+
+@font-face {
+  font-family: "fontcustom";
+  src: url("https://raw.github.com/wesbos/Font-Awesome-Docker-Icon/master/fontcustom/fontcustom_cb066050d5b786186aa0e7f121427d8b.eot");
+  src: url("https://raw.github.com/wesbos/Font-Awesome-Docker-Icon/master/fontcustom/fontcustom_cb066050d5b786186aa0e7f121427d8b.eot?#iefix") format("embedded-opentype"),
+       url("https://raw.github.com/wesbos/Font-Awesome-Docker-Icon/master/fontcustom/fontcustom_cb066050d5b786186aa0e7f121427d8b.woff") format("woff"),
+       url("https://raw.github.com/wesbos/Font-Awesome-Docker-Icon/master/fontcustom/fontcustom_cb066050d5b786186aa0e7f121427d8b.ttf") format("truetype"),
+       url("https://raw.github.com/wesbos/Font-Awesome-Docker-Icon/master/fontcustom/fontcustom_cb066050d5b786186aa0e7f121427d8b.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "fontcustom";
+    src: url("https://raw.github.com/wesbos/Font-Awesome-Docker-Icon/master/fontcustom/fontcustom_cb066050d5b786186aa0e7f121427d8b.svg#fontcustom") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.fa-docker:before {
+  display: inline-block;
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.fa-docker:before { content: "\f100"; }
+
+
+
+
+
+
+
+
+
+
+
+
+

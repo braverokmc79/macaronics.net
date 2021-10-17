@@ -1,0 +1,282 @@
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+#updated-comics-section h3 {
+  padding-bottom: 3px;
+  margin-top: 0;
+  margin-bottom: 3px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+#updated-comics-section h3>a {
+  float:right;
+}
+
+#updated-comics-section h3>a,
+#updated-comics-section h3>a:hover {
+  text-decoration: none;
+ 
+}
+
+#past-comics,
+#last-comics,
+#bookmarked-comics {
+  margin-bottom: 20px;
+}
+
+#past-comics {
+  float: left;
+}
+
+#last-comics {
+  float: right;
+}
+
+#bookmarked-comics>div,
+#past-comics>div,
+#last-comics>div {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+#bookmarked-comics>div,
+#past-comics>div,
+#last-comics>div {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#bookmarked-comics {
+  width: 100%;
+}
+
+@media (min-width: 810px) {
+  #past-comics, #last-comics {
+    width: 50%;
+  }
+}
+
+@media (max-width: 809px) {
+  #past-comics, #last-comics {
+    width: 100%;
+  }
+}
+
+
+.iron-image-0 {
+  display: inline-block;
+        overflow: hidden;
+        position: relative;
+}
+
+.iron-image-0 #sizedImgDiv.iron-image {
+  position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+        display: none;
+}
+
+.iron-image-0 #img.iron-image {
+  display: block;
+        width: 100%;
+        height: 100%;
+}
+
+.iron-image-0[sizing] #sizedImgDiv.iron-image {
+  display: block;
+}
+
+.iron-image-0[sizing] #img.iron-image {
+  display: none;
+}
+
+.iron-image-0 #placeholder.iron-image {
+  position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+        background-color: inherit;
+        opacity: 1;;
+}
+
+.iron-image-0 #placeholder.faded-out.iron-image {
+  transition: opacity 0.5s linear;
+        opacity: 0;
+}
+
+
+
+
+
+.comics-vertical-card-0 {
+  display: block;
+        position: relative;
+}
+
+.comics-vertical-card-0[elevation="1"] {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                  0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                  0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.comics-vertical-card-0[elevation="2"] {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+                  0 1px 10px 0 rgba(0, 0, 0, 0.12),
+                  0 2px 4px -1px rgba(0, 0, 0, 0.4);
+}
+
+.comics-vertical-card-0[elevation="3"] {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+                  0 1px 18px 0 rgba(0, 0, 0, 0.12),
+                  0 3px 5px -1px rgba(0, 0, 0, 0.4);
+}
+
+.comics-vertical-card-0[elevation="4"] {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                  0 3px 14px 2px rgba(0, 0, 0, 0.12),
+                  0 5px 5px -3px rgba(0, 0, 0, 0.4);
+}
+
+.comics-vertical-card-0[elevation="5"] {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+                  0  6px 30px 5px rgba(0, 0, 0, 0.12),
+                  0  8px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.comics-vertical-card-0[animated] {
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comics-vertical-card-0 {
+  ;
+}
+
+.comics-vertical-card-0 {
+  display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        border-radius: 2px;
+        margin: 5px 2px;;
+}
+
+.comics-vertical-card-0 [hidden].comics-vertical-card {
+  display: none !important;
+}
+
+.comics-vertical-card-0 a.comics-vertical-card:focus,.comics-vertical-card-0 a.comics-vertical-card:hover {
+  text-decoration: none;
+  
+}
+
+.comics-vertical-card-0 .header.comics-vertical-card {
+  position: relative;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        overflow: hidden;;
+}
+
+.comics-vertical-card-0 .header.comics-vertical-card iron-image.comics-vertical-card {
+  width: 100%;
+        height: 100%;
+        pointer-events: none;;
+}
+
+.comics-vertical-card-0 .header.comics-vertical-card {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+        width: 180px;
+        height: 260px;
+}
+
+.comics-vertical-card-0 .card-content.comics-vertical-card {
+  width: 180px;
+        padding: 12px; 
+        position:relative;;
+}
+
+.comics-vertical-card-0 .comics-title.comics-vertical-card {
+  font-size: 18px; line-height: 18px;
+}
+
+.comics-vertical-card-0 .comics-author.comics-vertical-card,.comics-vertical-card-0 .comics-genres.comics-vertical-card {
+  font-size: 13px;
+}
+
+.comics-vertical-card-0 .comics-title.comics-vertical-card {
+  color: #424242;
+}
+
+.comics-vertical-card-0 .comics-author.comics-vertical-card {
+  color: #757575;
+}
+
+.comics-vertical-card-0 .comics-genres.comics-vertical-card {
+  color: #8e24aa;
+}
+
+.comics-vertical-card-0 .comics-classification.comics-vertical-card {
+  color: #d32f2f;
+        font-size: 80%;
+}
+
+.comics-vertical-card-0  .card-actions {
+  border-top: 1px solid #e8e8e8;
+        padding: 5px 16px;
+        position:relative;;
+}
+
+@media(max-width: 370px) {
+.comics-vertical-card-0 {
+  width: 100%;
+}
+
+.comics-vertical-card-0 a.comics-vertical-card {
+  display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+
+      -ms-flex-direction: row;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+}
+
+.comics-vertical-card-0 .header.comics-vertical-card {
+  flex: 0 1 auto;
+          width: 90px;
+          min-width: 90px;
+          height: 130px;
+          min-height: 130px;
+          border-bottom: none;
+          border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.comics-vertical-card-0 .card-content.comics-vertical-card {
+  flex: 0 1 auto;
+          width: 100%;display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+
+      -ms-flex-direction: column;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+          justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
