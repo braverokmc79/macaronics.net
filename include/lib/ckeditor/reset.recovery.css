@@ -1,0 +1,8 @@
+label{cursor:pointer}strong,b{font-weight:bold}em,i{font-style:italic}.cke_panel_listItem{font-size:.75em;font-family:NanumGothic,sans-serif}
+.cke_panel_listItem p,.cke_panel_listItem h2,.cke_panel_listItem h3,.cke_panel_listItem h4,.cke_panel_listItem h5,.cke_panel_listItem h6{-webkit-margin-before:0 !important;-webkit-margin-after:0 !important;padding:.3em 0}
+.cke_panel_listItem h2{border-bottom:1px dotted #858585;font-size:1.6em;font-weight:bold;color:#333;height:1.7em;line-height:1.7em;padding-bottom:.2em}
+.cke_panel_listItem h3{font-size:1.5em;font-weight:bold;color:#333}.cke_panel_listItem h4{font-size:1.4em;font-weight:bold;color:#333}
+.cke_panel_listItem h5{font-size:1.2em;font-weight:bold;color:#333}.cke_panel_listItem h6{font-size:1.1em;font-weight:bold;color:#333}
+.cke_panel_listItem p{margin:1em 0}.cke_panel_listItem .notice,.cke_panel_listItem .warning,.cke_panel_listItem .note{padding:5px}
+.cke_panel_listItem .notice{background-color:#fcf8e3;color:#b98d3f}.cke_panel_listItem .warning{background-color:#f2dede;color:#b94242}
+.cke_panel_listItem .note{background-color:#d9edf7;color:#3383aa}
