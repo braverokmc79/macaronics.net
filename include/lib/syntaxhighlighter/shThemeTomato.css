@@ -1,0 +1,117 @@
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ *
+ * @Customized by Sometimes-n
+ * http://sometimes-n.tistory.com/
+ *
+ */
+.syntaxhighlighter {
+  background-color: white !important;
+}
+.syntaxhighlighter .line.alt1 {
+  background-color: white !important;
+}
+.syntaxhighlighter .line.alt2 {
+  background-color: white !important;
+}
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
+  background-color: #e0e0e0 !important;
+}
+.syntaxhighlighter .line.highlighted.number {
+  color: black !important;
+}
+.syntaxhighlighter table caption {
+  color: black !important;
+}
+.syntaxhighlighter .gutter {
+  color: #afafaf !important;
+}
+.syntaxhighlighter .gutter .line {
+  border-right: 3px solid #6ce26c !important;
+}
+.syntaxhighlighter .gutter .line.highlighted {
+  background-color: #6ce26c !important;
+  color: white !important;
+}
+.syntaxhighlighter.printing .line .content {
+  border: none !important;
+}
+.syntaxhighlighter.collapsed {
+  overflow: visible !important;
+}
+.syntaxhighlighter.collapsed .toolbar {
+  color: blue !important;
+  background: white !important;
+  border: 1px solid #6ce26c !important;
+}
+.syntaxhighlighter.collapsed .toolbar a {
+  color: blue !important;
+}
+.syntaxhighlighter.collapsed .toolbar a:hover {
+  color: red !important;
+}
+.syntaxhighlighter .toolbar {
+  color: white !important;
+  background: #6ce26c !important;
+  border: none !important;
+}
+.syntaxhighlighter .toolbar a {
+  color: white !important;
+}
+.syntaxhighlighter .toolbar a:hover {
+  color: black !important;
+}
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a { /* 일반 글자 색상 (html 예:일반 텍스트) */
+  color: black !important;
+}
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a { /* 주석 처리 글자 색상 */
+  color: #009f00 !important;
+}
+.syntaxhighlighter .string, .syntaxhighlighter .string a { /* '글자' 또는 "글자" 안의 색상 */
+  color: #ff1493 !important;
+}
+.syntaxhighlighter .keyword { /* 키워드로 등록된 색상 (html 예:태그명) */
+  color: #066de2 !important;
+}
+.syntaxhighlighter .preprocessor { /* preprocessor 색상 (javascript 예:#region 또는  #endregion) */
+  color: #994500 !important;
+}
+.syntaxhighlighter .variable { /* variable 색상 (php 예:$thisvalue) */
+  color: #aa7700 !important;
+}
+.syntaxhighlighter .value { /* value 색상 (css 예:숫자 또는 색상코드#a0a0a0 또는 bold 같은 값)  */
+  color: #df5000 !important;
+}
+.syntaxhighlighter .functions { /* functions 색상 (php 예:substr 같은 funcs에 등록한 키워드 색상) */
+  color: #ff1493 !important;
+}
+.syntaxhighlighter .constants { /* constants 색상(php 예:__FILE__ 같은 constants에 등록한 키워드 색상 */
+  color: #066de2 !important;
+}
+.syntaxhighlighter .script { /* script class 색상(이 class는 찾지 못해서 .keyword와 같은 색상으로 지정했어요) */
+  color: #a71d5d !important;
+}
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a { /* color1 class 색상(html 예:태그의 attribute 색상- width, height, class 등등)  */
+  color: #df5000 !important;
+}
+.syntaxhighlighter .color2, .syntaxhighlighter .color2 a { /* color2 class 색상(html 예:<![ ... [ ... ]]> 같은 ..) */
+  color: #ff1493 !important;
+}
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a { /* color3 class 색상(css 예:!important 단어 색상) */
+  color: red !important;
+}
+
+/* class의 font-weight: bold 는 모두 삭제 했습니다 */
