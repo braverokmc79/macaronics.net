@@ -1,0 +1,199 @@
+	#post_delete{
+		
+		color:#D13A3A;
+	}
+	#post_alter{
+		color:#1964DA;
+	}
+	.help-block{
+		color:#D91F25;
+	}
+	#post_posting{
+		
+		color:#15B994;
+	}
+	
+	.alert_attach{
+		
+		color :#15B994;	
+		font-weight: 800;
+		
+	}
+	.smalltext{
+		color: #DE5656;
+		
+	}
+	.smalltext_select{
+		color: #0072B2;
+	}
+	#My_line{
+		
+		border: 1px solid #DE5656;
+		padding:3px;
+	}
+	.form-group >p{
+		color: #DE5656;
+	}
+	.nopost{
+		margin-top: 	200px;
+		margin-bottom: 200px;
+		font-size: x-large;
+		text-align: center;
+	}
+	.remaining{
+		display:inline;
+		float: right;
+	}
+	
+	.remaining2{
+		display:inline;
+		float: right;
+	}
+	.remaining3{
+		display:inline;
+		float: right;
+	}
+	
+	
+	#href_reply{
+		display: inline;
+		color: #D91F25;
+	}
+	#replyup{
+		display: none;
+		color: #008B8B;
+	}
+	#modalreplysmlltext{
+		color: #D91F25;
+	}
+	.comment-meta > .subReply{
+		
+		color: #0076E8;
+		float:right;
+	}
+	
+	.comment-meta > .rrsubReply{
+		
+		color: #0076E8;
+		float:right;
+	}
+	
+	
+	#reply_saveChange{
+		
+		display: none;
+	}
+	
+	#reply_write{
+		
+		display: none;
+	}
+	#contentModify{
+		border: 0;
+		outline: 0;
+		background-color: #FFFFFF;
+		color:#0176E8;
+	}
+	#recommendation > a span {
+		display:inline;
+		color :#FF0084;
+		font-size: xx-large;
+		width: 20px;
+		height: 20px;
+		
+	}
+	#recommendation > a +a {
+		display:inline;
+		color :#000000;
+		
+		font-size: xx-large;
+		width: 20px;
+		height: 20px;
+	}
+	
+	#recommendation > a +a {
+		display:none;
+		
+	}
+	#recommendation{
+		font-size: xx-large;
+		color :#000000;
+	}
+	#recommendation small{
+		
+		font-size: small;
+	}
+	
+	.metaInfo > span > a >#heart{
+		color:#D91F25;
+	}
+	.metaInfo >span > #fa-comments{
+		
+		color:#FFC90E;
+	}
+	.metaInfo >span > #sarmain{
+		
+		color:#0076E8;
+	}
+	.metaInfo >span > #calendar{
+		
+		color:#0E732C;
+	}
+	.metaInfo > span > a >#searchView{
+		color:#682185;
+	}
+	#Recent_board_subject{
+		color:#682185;	
+		font-weight: 600; 
+	}
+	
+	
+	
+	#titleBlog{
+			box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+		 -webkit-box-shadow:10px 10px 10px rgba(0, 0, 0, 1);
+    	 -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);	
+         
+         
+	}
+	
+	.blog{
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+	.page_head{
+		margin-bottom: 10px;
+	}
+	
+	#faSave{
+		color:#682185;
+	}
+	 #new{
+		font-size: xx-small;
+		width:5px;
+	}
+	
+	#my_calender{
+		
+		display:none;
+		background-color: #108031;
+		color :#FFFFFF;
+		max-width: 200px;
+		padding: 10px;
+		
+	}
+
+	#my_calender > table > tbody > tr >td{
+		
+		width: 40px;
+		
+	}
+	
+	.today{
+		
+		color: #E72828;
+	}
+
+
+

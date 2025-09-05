@@ -1,0 +1,99 @@
+﻿{
+	"members_info" : [
+		{
+			"name" : "이순신",
+			"age" : 20,
+			"hobbys" : ["낚시", "요리"],
+			"info" : {
+				"no" : 1,
+				"id" : "abcd",
+				"pw" : 1234
+			}
+		},
+		{
+			"name" : "hong gil soon",
+			"age" : 30,
+			"hobbys" : ["독서", "등산"],
+			"info" : {
+				"no" : 2,
+				"id" : "efgh",
+				"pw" : 5678
+			}
+		}
+
+	,
+
+				{
+        			"name" : "hong gil dong",
+        			"age" : 20,
+        			"hobbys" : ["수영", "요리"],
+        			"info" : {
+        				"no" : 1,
+        				"id" : "abcd",
+        				"pw" : 1234
+        			}
+        		},
+        		{
+        			"name" : "강감창",
+        			"age" : 30,
+        			"hobbys" : ["독서", "등산"],
+        			"info" : {
+        				"no" : 3,
+        				"id" : "efgh",
+        				"pw" : 5678
+        			}
+        		}
+
+
+,
+        			{
+            			"name" : "이산",
+            			"age" : 20,
+            			"hobbys" : ["살인", "요리"],
+            			"info" : {
+            				"no" : 4,
+            				"id" : "abcd",
+            				"pw" : 1234
+            			}
+            		},
+            		{
+            			"name" : "김하늘",
+            			"age" : 30,
+            			"hobbys" : ["낚시", "게임"],
+            			"info" : {
+            				"no" : 5,
+            				"id" : "efgh",
+            				"pw" : 5678
+            			}
+            		}
+
+
+            	,
+            			{
+                			"name" : "김민종",
+                			"age" : 27,
+                			"hobbys" : ["수영", "요리"],
+                			"info" : {
+                				"no" : 6,
+                				"id" : "abcd",
+                				"pw" : 1234
+                			}
+                		},
+                		{
+                			"name" : "최준호",
+                			"age" : 35,
+                			"hobbys" : ["독서", "등산"],
+                			"info" : {
+                				"no" : 7,
+                				"id" : "aafgh",
+                				"pw" : 5678
+                			}
+                		}
+
+
+
+
+
+
+	]
+}
