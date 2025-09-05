@@ -1,0 +1,130 @@
+
+
+```
+GRPC_URL=payment:3001
+```
+
+
+```
+import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
+
+import * as Joi from 'joi';
+import { PaymentModule } from './payment/payment.module';
+import { ClientsModule, Transport } from '@nestjs/microservices';
+import { NOTIFICATION_SERVICE, NotificationMicroservice } from '@app/common';
+import { join } from 'path';
+
+@Module({
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      validationSchema: Joi.object({
+        HTTP_PORT: Joi.number().required(),
+        DB_URL: Joi.string().required(),
+      }),
+    }),
+    TypeOrmModule.forRootAsync({
+      useFactory: (configService: ConfigService) => ({
+        type: 'postgres',
+        url: configService.getOrThrow('DB_URL'),
+        autoLoadEntities: true,
+        synchronize: true,
+      }),
+      inject: [ConfigService],
+    }),
+
+    // NOTIFICATION_SERVICE microservice client  모듈
+    ClientsModule.registerAsync({
+      clients: [
+        {
+          name: NOTIFICATION_SERVICE,
+          useFactory: (configService: ConfigService) => ({
+            transport: Transport.GRPC,
+            options: {
+              package: NotificationMicroservice.protobufPackage,
+              protoPath: join(process.cwd(), 'proto/notification.proto'),
+              url: configService.getOrThrow('GRPC_URL'),
+            },
+          }),
+          inject: [ConfigService],
+        },
+      ],
+      isGlobal: true,
+    }),
+
+    PaymentModule,
+  ],
+})
+export class AppModule {}
+
+```
+
+
+
+```
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app.module';
+import { MicroserviceOptions, Transport } from '@nestjs/microservices';
+import { join } from 'path';
+import { ConfigService } from '@nestjs/config';
+import { PaymentMicroservice } from '@app/common';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  const configService = app.get(ConfigService);
+
+  app.connectMicroservice<MicroserviceOptions>({
+    transport: Transport.GRPC,
+    options: {
+      package: PaymentMicroservice.protobufPackage,
+      protoPath: join(process.cwd(), 'proto/payment.proto'),
+      url: configService.getOrThrow('GRPC_URL'),
+    },
+  });
+
+  await app.startAllMicroservices();
+}
+bootstrap();
+
+```
+
+
+
+```
+import {
+  Controller,
+  Get,
+  UseInterceptors,
+  UsePipes,
+  ValidationPipe,
+} from '@nestjs/common';
+import { PaymentService } from './payment.service';
+import { MessagePattern, Payload } from '@nestjs/microservices';
+import { RpcInterceptor } from '@app/common/interceptor';
+import { MakePaymentDto } from './dto/make-payment.dto';
+import { PaymentMicroservice } from '@app/common';
+import { PaymentMethod } from './entity/payment.entity';
+
+@Controller()
+export class PaymentController
+  implements PaymentMicroservice.PaymentServiceController
+{
+  constructor(private readonly paymentService: PaymentService) {}
+
+  // @MessagePattern({ cmd: 'make_payment' })
+  // @UsePipes(new ValidationPipe())
+  // @UseInterceptors(RpcInterceptor)
+  async makePayment(payload: PaymentMicroservice.MakePaymentRequest) {
+    console.log('🔖PaymentController  makePayment', payload);
+
+    return this.paymentService.makePayment({
+      ...payload,
+      paymentMethod: payload.paymentMethod as PaymentMethod,
+    });
+  }
+}
+
+```
